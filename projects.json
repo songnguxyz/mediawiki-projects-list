@@ -357,10 +357,15 @@
 		},
 		{
 			"name": "cookierun.wiki",
-			"regex": "(cookierun\\.wiki)",
+			"regex": "((?:([a-z-]{2,12})\\.)?cookierun\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/mw/",
-			"fullScriptPath": "https://cookierun.wiki/mw/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.cookierun.wiki/"
+				]
+			},
 			"extensions": [
 				"OAuth"
 			]
